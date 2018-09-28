@@ -1,0 +1,20 @@
+[{
+  "language" : "Java",
+  "version" : 8,
+  "isJvmBased" : "true"
+},
+{
+  "language" : "Java",
+  "version" : 7,
+  "isJvmBased" : "true"
+},
+{
+  "language" : "Groovy",
+  "version" : 3,
+  "isJvmBased" : "true"
+},
+{
+  "language" : "Kotlin",
+  "version" : 2,
+  "isJvmBased" : "true"
+}]
