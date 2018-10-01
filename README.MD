@@ -49,6 +49,8 @@ Filters themselves are JSON objects. The following format is observed:
 ```
 **attribute** is the name of a MongoDB collection field, and is also one of two mandatory fields, alongside **operator**. Either a **value** or a **range** must be provided but never both at once.
 
+Searches are conjunctive, i.e. the filters are combined via a logical AND operation.
+
 ### Operators
 One of the following operators must be used:
 
