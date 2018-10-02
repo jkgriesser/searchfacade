@@ -32,7 +32,7 @@ public class HttpRequestTest {
         HttpEntity<String> entity = new HttpEntity<>(null, new HttpHeaders());
         ResponseEntity<String> response = restTemplate.exchange(createURLWithPort()
                         + "/invalidPath", HttpMethod.GET, entity, String.class);
-        assertThat(response.getStatusCodeValue()).isEqualTo(HttpStatus.NOT_FOUND.value());
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     private String createURLWithPort() {

@@ -49,7 +49,7 @@ public class LanguageIntegrationTests {
                 .toUri();
         response = getResponse(targetUrl);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(HttpStatus.NOT_FOUND.value());
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
     }
 
     @Test
@@ -234,7 +234,7 @@ public class LanguageIntegrationTests {
                 .toUri();
         ResponseEntity<String> response = getResponse(targetUrl);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(HttpStatus.BAD_REQUEST.value());
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
     }
 
     private String createURLWithPort() {
