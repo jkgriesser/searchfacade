@@ -65,7 +65,7 @@ When searching by range, only **eq** is a valid operator.
 * MongoDB: Schema, indices, authentication, etc.
 * Rate limiting and limiting query results (i.e. pagination)
 * Results sorting
-* A custom error page for unknown REST paths (HTTP 404)ª
+* A custom error page for unknown REST paths (HTTP 404)
 * Logging
 * JUnit 5 integration (e.g. @DisplayName annotations for easy-to-read test descriptions)
 * Refactor / clean-up of Test classes
