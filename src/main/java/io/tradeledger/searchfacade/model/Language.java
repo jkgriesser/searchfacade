@@ -2,14 +2,14 @@ package io.tradeledger.searchfacade.model;
 
 import org.springframework.data.annotation.Id;
 
-public class Language {
+public final class Language {
 
     @Id
-    private String id;
+    private final String id;
 
-    private String language;
-    private Integer version;
-    private Boolean isJvmBased;
+    private final String language;
+    private final Integer version;
+    private final Boolean isJvmBased;
 
     public Language(String id, String language, Integer version, Boolean isJvmBased) {
         this.id = id;
@@ -22,32 +22,16 @@ public class Language {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getLanguage() {
         return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
     }
 
     public Integer getVersion() {
         return version;
     }
 
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
     public Boolean getJvmBased() {
         return isJvmBased;
-    }
-
-    public void setJvmBased(Boolean jvmBased) {
-        isJvmBased = jvmBased;
     }
 
     @Override

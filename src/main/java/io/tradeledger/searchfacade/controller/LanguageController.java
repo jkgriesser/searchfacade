@@ -18,25 +18,25 @@ import java.util.List;
 @RestController
 public class LanguageController {
 
-    private LanguageRepository repository;
+    private final LanguageRepository repository;
 
     public LanguageController(LanguageRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping("/")
-    String getGreeting() {
+    public String getGreeting() {
         return "Hello World! Welcome to the Search Facade REST API.";
     }
 
     @GetMapping("/languages/{id}")
-    Language getLanguage(@PathVariable String id) {
+    public Language getLanguage(@PathVariable String id) {
         return repository.findById(id)
                 .orElseThrow(() -> new LanguageNotFoundException(id));
     }
 
     @GetMapping("/languages/search")
-    List<Language> searchLanguages(@RequestParam(value="filter") String filters) {
+    public List<Language> searchLanguages(@RequestParam(value="filter") String filters) {
         try {
             // TODO Replace the conversion logic with a custom type converter
             //  Note: The deserialisation of multiple JSON filter parameters doesn't work without enclosing brackets.

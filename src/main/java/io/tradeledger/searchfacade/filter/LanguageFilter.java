@@ -9,10 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class LanguageFilter implements Filter {
+public final class LanguageFilter implements Filter {
 
-    private String attribute;
-    private String operator;
+    private final String attribute;
+    private final String operator;
     private Object value; // Can be either a String or an Integer
     private Integer rangeFrom;
     private Integer rangeTo;
@@ -82,40 +82,20 @@ public class LanguageFilter implements Filter {
         return attribute;
     }
 
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
-    }
-
     public String getOperator() {
         return operator;
-    }
-
-    public void setOperator(String operator) {
-        this.operator = operator;
     }
 
     public Object getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
-        this.value = value;
-    }
-
     public Integer getRangeFrom() {
         return rangeFrom;
     }
 
-    public void setRangeFrom(Integer rangeFrom) {
-        this.rangeFrom = rangeFrom;
-    }
-
     public Integer getRangeTo() {
         return rangeTo;
-    }
-
-    public void setRangeTo(Integer rangeTo) {
-        this.rangeTo = rangeTo;
     }
 
     @Override
