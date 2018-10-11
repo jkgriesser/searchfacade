@@ -9,8 +9,11 @@ import java.util.List;
 
 public class LanguageSearchRepositoryImpl implements LanguageSearchRepository {
 
-    @Autowired
     private MongoOperations operations;
+
+    public LanguageSearchRepositoryImpl(MongoOperations operations) {
+        this.operations = operations;
+    }
 
     @Override
     public List<Language> search(Filter[] filters) {
